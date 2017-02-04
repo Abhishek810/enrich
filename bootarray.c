@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int a[10],i,size,num,count=0;
+    int a[10],b[10],i,j=0;size,num,count=0;
     //Size of array
     scanf("%d",&size);
     //Elements of array
@@ -15,9 +15,14 @@ int main()
     {
         if(a[i]==num)
         {
-            printf("%d\t",i);
+            b[j]=i;
             count++;
+            j++;
         }
+    }
+    for(j=0;j<count;j++)
+    {
+        printf("%d",b[j]);
     }
     if(count==0)
     {
